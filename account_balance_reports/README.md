@@ -1,7 +1,6 @@
 # Accounting Balance Reports (Odoo 18 Community)
 
-LGPL-3 interactive **Balance Sheet** and **Trial Balance** for Community,
-aligned with the standard Chart of Accounts layout used by Odoo Accounting reports.
+Interactive **Balance Sheet** and **Trial Balance** for Odoo 18 Community.
 
 ## Menus
 
@@ -10,16 +9,23 @@ aligned with the standard Chart of Accounts layout used by Odoo Accounting repor
 
 ## Features
 
-- Full-screen interactive report (OWL client action)
-- Date presets, journals, draft entries, multi-company
-- Period comparison
-- Unfold / fold, hierarchy (Trial Balance), hide zeros, search
-- Horizontal Balance Sheet (Assets | Liabilities + Equity)
-- Drill-down to journal items
+- Enterprise-like filter bar (dates, journals, analytic, comparison, posted/draft)
+- Draft entries warning banner
+- Trial Balance: Initial / Period / End (Debit & Credit)
+- Balance Sheet: horizontal Assets | Liabilities + Equity
+- Drill-down to journal items per column
 - PDF and XLSX export
+- French translations (`i18n/fr.po`)
 
 ## Install
 
-1. Copy `account_balance_reports` into your addons path
-2. Update the Apps list
+1. Add this folder to your Odoo addons path
+2. Update Apps list
 3. Install **Accounting Balance Reports**
+4. Upgrade module if already installed (`-u account_balance_reports`)
+
+## Tests
+
+```bash
+odoo-bin -d YOUR_DB -i account_balance_reports --test-enable --stop-after-init
+```

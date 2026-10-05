@@ -1,0 +1,111 @@
+# Translation of Odoo Server.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-23 12:00+0000\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: account_balance_reports
+msgid "Trial Balance"
+msgstr "Balance comptable"
+
+#. module: account_balance_reports
+msgid "Balance Sheet"
+msgstr "Bilan"
+
+#. module: account_balance_reports
+msgid "Initial Balance"
+msgstr "Solde initial"
+
+#. module: account_balance_reports
+msgid "End Balance"
+msgstr "Solde final"
+
+#. module: account_balance_reports
+msgid "Period"
+msgstr "Période"
+
+#. module: account_balance_reports
+msgid "Debit"
+msgstr "Débit"
+
+#. module: account_balance_reports
+msgid "Credit"
+msgstr "Crédit"
+
+#. module: account_balance_reports
+msgid "Balance"
+msgstr "Solde"
+
+#. module: account_balance_reports
+msgid "Total"
+msgstr "Total"
+
+#. module: account_balance_reports
+msgid "Journal Items"
+msgstr "Écritures comptables"
+
+#. module: account_balance_reports
+msgid "Posted Entries"
+msgstr "Pièces comptabilisées"
+
+#. module: account_balance_reports
+msgid "All Entries"
+msgstr "Toutes les pièces"
+
+#. module: account_balance_reports
+msgid "All Journals"
+msgstr "Tous les journaux"
+
+#. module: account_balance_reports
+msgid "There are unposted journal entries prior to or included in this period."
+msgstr "Il y a des pièces non comptabilisées avant ou au cours de cette période."
+
+#. module: account_balance_reports
+msgid "This report is not supported by Accounting Balance Reports."
+msgstr "Ce rapport n'est pas pris en charge par Accounting Balance Reports."
+
+#. module: account_balance_reports
+msgid "You do not have access to accounting reports."
+msgstr "Vous n'avez pas accès aux rapports comptables."
+
+#. module: account_balance_reports
+msgid "Today"
+msgstr "Aujourd'hui"
+
+#. module: account_balance_reports
+msgid "This Month"
+msgstr "Ce mois"
+
+#. module: account_balance_reports
+msgid "Last Month"
+msgstr "Mois dernier"
+
+#. module: account_balance_reports
+msgid "This Quarter"
+msgstr "Ce trimestre"
+
+#. module: account_balance_reports
+msgid "Last Quarter"
+msgstr "Trimestre dernier"
+
+#. module: account_balance_reports
+msgid "This Year"
+msgstr "Cette année"
+
+#. module: account_balance_reports
+msgid "Last Year"
+msgstr "Année dernière"
+
+#. module: account_balance_reports
+msgid "In %s"
+msgstr "En %s"
+
+#. module: account_balance_reports
+msgid "Search..."
+msgstr "Rechercher..."

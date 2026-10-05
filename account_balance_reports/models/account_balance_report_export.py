@@ -19,7 +19,7 @@ class AccountBalanceReportExport(models.TransientModel):
     def _get_payload(self):
         self.ensure_one()
         options = json.loads(self.options_json or '{}')
-        return self.report_id.abr_get_report_payload(options)
+        return self.report_id.with_context(active_test=True).abr_get_report_payload(options)
 
     def _generate_xlsx(self, payload=None):
         self.ensure_one()
