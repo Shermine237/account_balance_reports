@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_report_abr_pdf" model="ir.actions.report">
+        <field name="name">Accounting Report PDF</field>
+        <field name="model">account.balance.report.export</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">account_balance_reports.report_abr_pdf</field>
+        <field name="report_file">account_balance_reports.report_abr_pdf</field>
+        <field name="print_report_name">'%s' % (object.report_id.name)</field>
+    </record>
+
+    <template id="report_abr_pdf">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="export">
+                <t t-set="payload" t-value="export._get_payload()"/>
+                <t t-set="options" t-value="payload['options']"/>
+                <t t-set="lines" t-value="payload['lines']"/>
+                <t t-call="web.external_layout">
+                    <div class="page o_abr_report">
+                        <h2 t-esc="payload.get('report_name')"/>
+                        <p>
+                            <strong>Period:</strong>
+                            <span t-esc="options.get('date_from')"/>
+                            —
+                            <span t-esc="options.get('date_to')"/>
+                        </p>
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Label</th>
+                                    <t t-foreach="options.get('columns') or []" t-as="col">
+                                        <th class="text-end" t-esc="col.get('name')"/>
+                                    </t>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="lines" t-as="line"
+                                    t-att-class="'fw-bold' if line.get('class') else None">
+                                    <td t-esc="line.get('code') or ''"/>
+                                    <td>
+                                        <span t-attf-style="padding-left: #{(line.get('level') or 0) * 12}px"
+                                              t-esc="line.get('name')"/>
+                                    </td>
+                                    <t t-foreach="line.get('columns') or []" t-as="col">
+                                        <td class="text-end">
+                                            <span t-esc="'{:,.2f}'.format(col.get('no_format') or 0.0)"/>
+                                        </td>
+                                    </t>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

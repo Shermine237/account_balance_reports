@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_abr_balance_sheet" model="ir.actions.client">
+        <field name="name">Balance Sheet</field>
+        <field name="tag">account_balance_report</field>
+        <field name="path">abr-balance-sheet</field>
+        <field name="context" eval="{'report_id': ref('account_balance_reports.balance_sheet_report')}"/>
+    </record>
+
+    <record id="action_abr_trial_balance" model="ir.actions.client">
+        <field name="name">Trial Balance</field>
+        <field name="tag">account_balance_report</field>
+        <field name="path">abr-trial-balance</field>
+        <field name="context" eval="{'report_id': ref('account_balance_reports.trial_balance_report')}"/>
+    </record>
+</odoo>

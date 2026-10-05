@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Audit Reports submenu (Community has no Enterprise audit menu) -->
+    <menuitem id="account_reports_audit_reports_menu"
+              name="Audit Reports"
+              parent="account.menu_finance_reports"
+              sequence="2"
+              groups="account.group_account_readonly,account.group_account_basic"/>
+
+    <menuitem id="menu_abr_balance_sheet"
+              name="Balance Sheet"
+              parent="account.account_reports_legal_statements_menu"
+              action="action_abr_balance_sheet"
+              groups="account.group_account_readonly,account.group_account_basic"
+              sequence="10"/>
+
+    <menuitem id="menu_abr_trial_balance"
+              name="Trial Balance"
+              parent="account_reports_audit_reports_menu"
+              action="action_abr_trial_balance"
+              groups="account.group_account_readonly,account.group_account_basic"
+              sequence="20"/>
+</odoo>

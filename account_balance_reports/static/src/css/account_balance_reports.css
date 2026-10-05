@@ -1,0 +1,23 @@
+.o_abr_report {
+    background: var(--o-view-background-color, #fff);
+}
+
+.o_abr_control_panel {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.o_abr_table .o_abr_section td,
+.o_abr_table .o_abr_group td,
+.o_abr_table .o_abr_total td {
+    font-weight: 700;
+}
+
+.o_abr_table .o_abr_name_col {
+    min-width: 280px;
+}
+
+.o_abr_filters .form-label {
+    display: block;
+}

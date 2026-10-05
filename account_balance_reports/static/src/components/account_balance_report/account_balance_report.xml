@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="account_balance_reports.AccountBalanceReportAction">
+        <div class="o_abr_report h-100 d-flex flex-column">
+            <div class="o_abr_control_panel border-bottom bg-view px-3 py-2">
+                <div class="d-flex flex-wrap align-items-center gap-2 justify-content-between">
+                    <h2 class="m-0" t-esc="state.reportName"/>
+                    <div class="btn-group">
+                        <button class="btn btn-secondary" t-on-click="exportPdf">PDF</button>
+                        <button class="btn btn-secondary" t-on-click="exportXlsx">XLSX</button>
+                    </div>
+                </div>
+
+                <div class="o_abr_filters d-flex flex-wrap gap-3 mt-2 align-items-end">
+                    <div>
+                        <label class="form-label mb-0 small">Date</label>
+                        <select class="form-select form-select-sm" t-on-change="onDateFilterChange">
+                            <t t-foreach="dateFilters" t-as="df" t-key="df.value">
+                                <option t-att-value="df.value"
+                                        t-att-selected="state.options.date_filter === df.value"
+                                        t-esc="df.label"/>
+                            </t>
+                        </select>
+                    </div>
+                    <div t-if="state.options.filter_date_range">
+                        <label class="form-label mb-0 small">From</label>
+                        <input type="date" class="form-control form-control-sm"
+                               t-att-value="state.options.date_from"
+                               t-on-change="onDateFromChange"/>
+                    </div>
+                    <div>
+                        <label class="form-label mb-0 small">To</label>
+                        <input type="date" class="form-control form-control-sm"
+                               t-att-value="state.options.date_to"
+                               t-on-change="onDateToChange"/>
+                    </div>
+
+                    <div t-if="state.options.filter_period_comparison">
+                        <label class="form-label mb-0 small">Comparison</label>
+                        <select class="form-select form-select-sm" t-on-change="onComparisonFilterChange">
+                            <option value="no_comparison" t-att-selected="(state.options.comparison and state.options.comparison.filter) === 'no_comparison'">No Comparison</option>
+                            <option value="same_last_period" t-att-selected="(state.options.comparison and state.options.comparison.filter) === 'same_last_period'">Previous Period</option>
+                            <option value="same_last_year" t-att-selected="(state.options.comparison and state.options.comparison.filter) === 'same_last_year'">Same Period Last Year</option>
+                        </select>
+                    </div>
+                    <div t-if="state.options.filter_period_comparison and state.options.comparison and state.options.comparison.filter !== 'no_comparison'">
+                        <label class="form-label mb-0 small">Periods</label>
+                        <input type="number" min="1" max="12" class="form-control form-control-sm"
+                               t-att-value="(state.options.comparison and state.options.comparison.number_period) or 1"
+                               t-on-change="onComparisonNumberChange"/>
+                    </div>
+
+                    <div t-if="state.options.filter_journals">
+                        <label class="form-label mb-0 small">Journals</label>
+                        <select class="form-select form-select-sm" multiple="multiple" t-on-change="onJournalChange"
+                                style="min-width: 160px; height: 70px;">
+                            <t t-foreach="state.options.available_journals or []" t-as="j" t-key="j.id">
+                                <option t-att-value="j.id"
+                                        t-att-selected="(state.options.journal_ids or []).includes(j.id)"
+                                        t-esc="j.name"/>
+                            </t>
+                        </select>
+                    </div>
+
+                    <div t-if="state.options.multi_company">
+                        <label class="form-label mb-0 small">Companies</label>
+                        <select class="form-select form-select-sm" multiple="multiple" t-on-change="onCompanyChange"
+                                style="min-width: 160px; height: 70px;">
+                            <t t-foreach="state.options.available_companies or []" t-as="c" t-key="c.id">
+                                <option t-att-value="c.id"
+                                        t-att-selected="(state.options.company_ids or []).includes(c.id)"
+                                        t-esc="c.name"/>
+                            </t>
+                        </select>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="abr_all_entries"
+                               t-att-checked="state.options.all_entries"
+                               t-on-change="onAllEntriesChange"/>
+                        <label class="form-check-label" for="abr_all_entries">Include Draft</label>
+                    </div>
+                    <div class="form-check" t-if="state.options.filter_hierarchy !== 'disabled' and state.handler === 'trial_balance'">
+                        <input class="form-check-input" type="checkbox" id="abr_hierarchy"
+                               t-att-checked="state.options.hierarchy"
+                               t-on-change="onHierarchyChange"/>
+                        <label class="form-check-label" for="abr_hierarchy">Hierarchy</label>
+                    </div>
+                    <div class="form-check" t-if="state.options.filter_hide_0_lines !== 'never'">
+                        <input class="form-check-input" type="checkbox" id="abr_hide_zero"
+                               t-att-checked="state.options.hide_zero_lines"
+                               t-on-change="onHideZeroChange"/>
+                        <label class="form-check-label" for="abr_hide_zero">Hide zeros</label>
+                    </div>
+                    <div class="form-check" t-if="state.options.filter_unfold_all">
+                        <input class="form-check-input" type="checkbox" id="abr_unfold_all"
+                               t-att-checked="state.options.unfold_all"
+                               t-on-change="onUnfoldAllChange"/>
+                        <label class="form-check-label" for="abr_unfold_all">Unfold all</label>
+                    </div>
+                    <div t-if="state.options.search_bar" class="d-flex gap-1 align-items-end">
+                        <div>
+                            <label class="form-label mb-0 small">Search</label>
+                            <input type="text" class="form-control form-control-sm"
+                                   t-att-value="state.options.search_value or ''"
+                                   t-on-input="onSearchInput"/>
+                        </div>
+                        <button class="btn btn-sm btn-primary" t-on-click="onSearchApply">Go</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o_abr_body flex-grow-1 overflow-auto p-3">
+                <div t-if="state.loading" class="text-muted">Loading…</div>
+                <t t-else="">
+                    <div t-if="state.options.horizontal_split" class="row g-3">
+                        <div class="col-lg-6">
+                            <t t-call="account_balance_reports.ReportTable">
+                                <t t-set="tableLines" t-value="leftLines"/>
+                            </t>
+                        </div>
+                        <div class="col-lg-6">
+                            <t t-call="account_balance_reports.ReportTable">
+                                <t t-set="tableLines" t-value="rightLines"/>
+                            </t>
+                        </div>
+                    </div>
+                    <div t-else="">
+                        <t t-call="account_balance_reports.ReportTable">
+                            <t t-set="tableLines" t-value="visibleLines"/>
+                        </t>
+                    </div>
+                </t>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="account_balance_reports.ReportTable">
+        <div class="table-responsive">
+            <table class="table table-sm table-hover o_abr_table mb-0">
+                <thead>
+                    <tr>
+                        <th rowspan="2" class="o_abr_name_col">Account</th>
+                        <t t-foreach="columnGroups" t-as="group" t-key="group.name">
+                            <th t-att-colspan="group.columns.length" class="text-center border-start"
+                                t-esc="group.name"/>
+                        </t>
+                        <th rowspan="2" class="text-center"> </th>
+                    </tr>
+                    <tr>
+                        <t t-foreach="state.options.columns or []" t-as="col" t-key="col.key">
+                            <th class="text-end border-start" t-esc="col.name"/>
+                        </t>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="tableLines" t-as="line" t-key="line.id">
+                        <tr t-att-class="line.class">
+                            <td>
+                                <span t-att-style="'padding-left:' + linePadding(line)">
+                                    <button t-if="line.unfoldable"
+                                            class="btn btn-link btn-sm p-0 me-1"
+                                            t-on-click="() => this.toggleLine(line)">
+                                        <i t-att-class="line.unfolded or (state.options.unfolded_lines or []).includes(line.id) or state.options.unfold_all ? 'fa fa-caret-down' : 'fa fa-caret-right'"/>
+                                    </button>
+                                    <span t-esc="line.name"/>
+                                </span>
+                            </td>
+                            <t t-foreach="line.columns or []" t-as="col" t-key="col.key">
+                                <td class="text-end border-start font-monospace"
+                                    t-esc="formatValue(col.no_format)"/>
+                            </t>
+                            <td class="text-center">
+                                <button t-if="line.caret or line.account_id or line.account_group_id"
+                                        class="btn btn-link btn-sm p-0"
+                                        title="Journal Items"
+                                        t-on-click="() => this.openJournalItems(line)">
+                                    <i class="fa fa-list"/>
+                                </button>
+                            </td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+        </div>
+    </t>
+</templates>
