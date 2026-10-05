@@ -19,39 +19,39 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.xml:0
 msgid "% Comparison"
-msgstr ""
+msgstr "% Comparaison"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.js:0
 msgid "%s journals"
-msgstr ""
+msgstr "%s journaux"
 
 #. module: account_balance_reports
 #: model:ir.actions.report,print_report_name:account_balance_reports.action_report_abr_pdf
 msgid "'%s' % (object.report_id.name)"
-msgstr ""
+msgstr "'%s' % (object.report_id.name)"
 
 #. module: account_balance_reports
 #: model_terms:ir.ui.view,arch_db:account_balance_reports.report_abr_pdf
 msgid "<strong>Period:</strong>"
-msgstr ""
+msgstr "<strong>Période :</strong>"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_total_assets
 msgid "ASSETS"
-msgstr ""
+msgstr "ACTIF"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.xml:0
 msgid "Account"
-msgstr ""
+msgstr "Compte"
 
 #. module: account_balance_reports
 #: model:ir.model,name:account_balance_reports.model_account_balance_report_export
 msgid "Accounting Balance Report Export"
-msgstr ""
+msgstr "Export de rapport comptable"
 
 #. module: account_balance_reports
 #: model:ir.model,name:account_balance_reports.model_account_report
@@ -61,37 +61,37 @@ msgstr "Rapport comptable"
 #. module: account_balance_reports
 #: model:ir.actions.report,name:account_balance_reports.action_report_abr_pdf
 msgid "Accounting Report PDF"
-msgstr ""
+msgstr "Rapport comptable PDF"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.js:0
 msgid "All Entries"
-msgstr ""
+msgstr "Toutes les pièces"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.js:0
 msgid "All Journals"
-msgstr ""
+msgstr "Tous les journaux"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.xml:0
 msgid "Analytic"
-msgstr ""
+msgstr "Analytique"
 
 #. module: account_balance_reports
 #: model:ir.ui.menu,name:account_balance_reports.account_reports_audit_reports_menu
 msgid "Audit Reports"
-msgstr ""
+msgstr "Rapports d'audit"
 
 #. module: account_balance_reports
 #. odoo-python
 #: code:addons/account_balance_reports/models/account_report.py:0
 #: model:account.report.column,name:account_balance_reports.balance_sheet_report_balance
 msgid "Balance"
-msgstr ""
+msgstr "Solde"
 
 #. module: account_balance_reports
 #: model:account.report,name:account_balance_reports.balance_sheet_report
@@ -99,267 +99,267 @@ msgstr ""
 #: model:ir.model.fields.selection,name:account_balance_reports.selection__account_report__abr_handler__balance_sheet
 #: model:ir.ui.menu,name:account_balance_reports.menu_abr_balance_sheet
 msgid "Balance Sheet"
-msgstr ""
+msgstr "Bilan"
 
 #. module: account_balance_reports
 #: model:ir.model,name:account_balance_reports.model_account_report_balance_sheet
 msgid "Balance Sheet Report Handler"
-msgstr ""
+msgstr "Gestionnaire de bilan"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_bank
 msgid "Bank and Cash Accounts"
-msgstr ""
+msgstr "Banque et comptes de trésorerie"
 
 #. module: account_balance_reports
 #. odoo-python
 #: code:addons/account_balance_reports/models/account_balance_report_export.py:0
 #: model_terms:ir.ui.view,arch_db:account_balance_reports.report_abr_pdf
 msgid "Code"
-msgstr ""
+msgstr "Code"
 
 #. module: account_balance_reports
 #: model:ir.model.fields,field_description:account_balance_reports.field_account_report__abr_handler
 msgid "Community Report Handler"
-msgstr ""
+msgstr "Gestionnaire de rapport Community"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.xml:0
 msgid "Companies"
-msgstr ""
+msgstr "Sociétés"
 
 #. module: account_balance_reports
 #: model:ir.model.fields,field_description:account_balance_reports.field_account_balance_report_export__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Créé par"
 
 #. module: account_balance_reports
 #: model:ir.model.fields,field_description:account_balance_reports.field_account_balance_report_export__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Créé le"
 
 #. module: account_balance_reports
 #. odoo-python
 #: code:addons/account_balance_reports/models/account_report.py:0
 #: model:account.report.column,name:account_balance_reports.trial_balance_report_credit
 msgid "Credit"
-msgstr ""
+msgstr "Crédit"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_current_assets
 #: model:account.report.line,name:account_balance_reports.abr_bs_current_assets_other
 msgid "Current Assets"
-msgstr ""
+msgstr "Actif circulant"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_current_liabilities
 #: model:account.report.line,name:account_balance_reports.abr_bs_current_liabilities_other
 msgid "Current Liabilities"
-msgstr ""
+msgstr "Passif circulant"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_curr_retained
 msgid "Current Year Retained Earnings"
-msgstr ""
+msgstr "Résultat reporté de l'exercice en cours"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_curr_year_earnings
 msgid "Current Year Unallocated Earnings"
-msgstr ""
+msgstr "Résultat non affecté de l'exercice en cours"
 
 #. module: account_balance_reports
 #. odoo-python
 #: code:addons/account_balance_reports/models/account_report.py:0
 #: model:account.report.column,name:account_balance_reports.trial_balance_report_debit
 msgid "Debit"
-msgstr ""
+msgstr "Débit"
 
 #. module: account_balance_reports
 #: model:ir.model.fields,field_description:account_balance_reports.field_account_balance_report_export__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nom affiché"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_equity
 msgid "EQUITY"
-msgstr ""
+msgstr "CAPITAUX PROPRES"
 
 #. module: account_balance_reports
 #. odoo-python
 #: code:addons/account_balance_reports/models/account_report.py:0
 msgid "End Balance"
-msgstr ""
+msgstr "Solde final"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.xml:0
 msgid "Hide zeros"
-msgstr ""
+msgstr "Masquer les zéros"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.xml:0
 msgid "Hierarchy"
-msgstr ""
+msgstr "Hiérarchie"
 
 #. module: account_balance_reports
 #: model:ir.model.fields,field_description:account_balance_reports.field_account_balance_report_export__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.js:0
 msgid "In %s"
-msgstr ""
+msgstr "En %s"
 
 #. module: account_balance_reports
 #. odoo-python
 #: code:addons/account_balance_reports/models/account_report.py:0
 msgid "Initial Balance"
-msgstr ""
+msgstr "Solde initial"
 
 #. module: account_balance_reports
 #. odoo-python
 #: code:addons/account_balance_reports/models/account_report.py:0
 msgid "Journal Items"
-msgstr ""
+msgstr "Écritures comptables"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_liabilities
 msgid "LIABILITIES"
-msgstr ""
+msgstr "PASSIF"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_liabilities_equity
 msgid "LIABILITIES + EQUITY"
-msgstr ""
+msgstr "PASSIF + CAPITAUX PROPRES"
 
 #. module: account_balance_reports
 #. odoo-python
 #: code:addons/account_balance_reports/models/account_balance_report_export.py:0
 #: model_terms:ir.ui.view,arch_db:account_balance_reports.report_abr_pdf
 msgid "Label"
-msgstr ""
+msgstr "Libellé"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.js:0
 msgid "Last Month"
-msgstr ""
+msgstr "Mois dernier"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.js:0
 msgid "Last Quarter"
-msgstr ""
+msgstr "Trimestre dernier"
 
 #. module: account_balance_reports
 #: model:ir.model.fields,field_description:account_balance_reports.field_account_balance_report_export__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Dernière modification par"
 
 #. module: account_balance_reports
 #: model:ir.model.fields,field_description:account_balance_reports.field_account_balance_report_export__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Dernière modification le"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.js:0
 msgid "Last Year"
-msgstr ""
+msgstr "Année dernière"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.xml:0
 msgid "Loading…"
-msgstr ""
+msgstr "Chargement…"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_off_sheet
 msgid "OFF BALANCE SHEET ACCOUNTS"
-msgstr ""
+msgstr "COMPTES HORS BILAN"
 
 #. module: account_balance_reports
 #: model:ir.model.fields,field_description:account_balance_reports.field_account_balance_report_export__options_json
 msgid "Options Json"
-msgstr ""
+msgstr "Options JSON"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.xml:0
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_payables
 msgid "Payables"
-msgstr ""
+msgstr "Dettes"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_fixed_assets
 msgid "Plus Fixed Assets"
-msgstr ""
+msgstr "Immobilisations corporelles"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_non_current_assets
 msgid "Plus Non-current Assets"
-msgstr ""
+msgstr "Immobilisations non courantes"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_non_current_liabilities
 msgid "Plus Non-current Liabilities"
-msgstr ""
+msgstr "Dettes non courantes"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.js:0
 msgid "Posted Entries"
-msgstr ""
+msgstr "Pièces comptabilisées"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_prepayments
 msgid "Prepayments"
-msgstr ""
+msgstr "Charges constatées d'avance"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.xml:0
 msgid "Previous Period"
-msgstr ""
+msgstr "Période précédente"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_prev_retained
 msgid "Previous Years Retained Earnings"
-msgstr ""
+msgstr "Résultat reporté des exercices antérieurs"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_prev_year_earnings
 msgid "Previous Years Unallocated Earnings"
-msgstr ""
+msgstr "Résultat non affecté des exercices antérieurs"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_receivable
 msgid "Receivables"
-msgstr ""
+msgstr "Créances"
 
 #. module: account_balance_reports
 #: model:ir.model.fields,field_description:account_balance_reports.field_account_balance_report_export__report_id
 msgid "Report"
-msgstr ""
+msgstr "Rapport"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_retained_earnings
 msgid "Retained Earnings"
-msgstr ""
+msgstr "Résultat reporté"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.xml:0
 msgid "Same Period Last Year"
-msgstr ""
+msgstr "Même période l'année dernière"
 
 #. module: account_balance_reports
 #. odoo-python
@@ -367,42 +367,43 @@ msgstr ""
 msgid ""
 "There are unposted journal entries prior to or included in this period."
 msgstr ""
+"Il y a des pièces non comptabilisées avant ou au cours de cette période."
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.js:0
 msgid "This Month"
-msgstr ""
+msgstr "Ce mois"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.js:0
 msgid "This Quarter"
-msgstr ""
+msgstr "Ce trimestre"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.js:0
 msgid "This Year"
-msgstr ""
+msgstr "Cette année"
 
 #. module: account_balance_reports
 #. odoo-python
 #: code:addons/account_balance_reports/models/account_report.py:0
 msgid "This report is not supported by Accounting Balance Reports."
-msgstr ""
+msgstr "Ce rapport n'est pas pris en charge par Accounting Balance Reports."
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.js:0
 msgid "Today"
-msgstr ""
+msgstr "Aujourd'hui"
 
 #. module: account_balance_reports
 #. odoo-python
 #: code:addons/account_balance_reports/models/account_report_trial_balance.py:0
 msgid "Total"
-msgstr ""
+msgstr "Total"
 
 #. module: account_balance_reports
 #: model:account.report,name:account_balance_reports.trial_balance_report
@@ -410,42 +411,42 @@ msgstr ""
 #: model:ir.model.fields.selection,name:account_balance_reports.selection__account_report__abr_handler__trial_balance
 #: model:ir.ui.menu,name:account_balance_reports.menu_abr_trial_balance
 msgid "Trial Balance"
-msgstr ""
+msgstr "Balance comptable"
 
 #. module: account_balance_reports
 #: model:ir.model,name:account_balance_reports.model_account_report_trial_balance
 msgid "Trial Balance Report Handler"
-msgstr ""
+msgstr "Gestionnaire de balance comptable"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_unaffected_earnings
 msgid "Unallocated Earnings"
-msgstr ""
+msgstr "Résultat non affecté"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.xml:0
 msgid "Unfold all"
-msgstr ""
+msgstr "Tout déplier"
 
 #. module: account_balance_reports
 #. odoo-javascript
 #: code:addons/account_balance_reports/static/src/components/account_balance_report/account_balance_report.xml:0
 msgid "XLSX"
-msgstr ""
+msgstr "XLSX"
 
 #. module: account_balance_reports
 #: model:ir.model.fields,field_description:account_balance_reports.field_account_balance_report_export__xlsx_file
 msgid "Xlsx File"
-msgstr ""
+msgstr "Fichier XLSX"
 
 #. module: account_balance_reports
 #: model:ir.model.fields,field_description:account_balance_reports.field_account_balance_report_export__xlsx_filename
 msgid "Xlsx Filename"
-msgstr ""
+msgstr "Nom du fichier XLSX"
 
 #. module: account_balance_reports
 #. odoo-python
 #: code:addons/account_balance_reports/models/account_report.py:0
 msgid "You do not have access to accounting reports."
-msgstr ""
+msgstr "Vous n'avez pas accès aux rapports comptables."
