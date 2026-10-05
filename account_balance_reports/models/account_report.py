@@ -90,8 +90,10 @@ class AccountReport(models.Model):
             'name': _('Journal Items'),
             'res_model': 'account.move.line',
             'view_mode': 'list,form',
+            'views': [[False, 'list'], [False, 'form']],
             'domain': domain,
             'context': {'search_default_group_by_account': 1},
+            'target': 'current',
         }
 
     def abr_export_xlsx(self, options=None):
