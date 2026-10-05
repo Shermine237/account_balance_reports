@@ -13,7 +13,9 @@ Interactive Balance Sheet and Trial Balance for Odoo 18 Community.
 * Drill-down to journal items
 * PDF and XLSX export
     """,
-    'author': 'Custom',
+    'author': 'Charlie Rostant YOSSA',
+    'phone': '+237 656 95 38 29',
+    'email': 'charlieyossa@gmail.com',
     'license': 'LGPL-3',
     'depends': ['account'],
     'data': [
