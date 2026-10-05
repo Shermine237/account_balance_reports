@@ -131,11 +131,12 @@ class AccountReport(models.Model):
         today = fields.Date.context_today(self)
 
         date_filter = previous_options.get('date_filter') or self.default_opening_date_filter or 'this_month'
-        date_from, date_to = self._abr_dates_from_filter(date_filter, today, company)
-        if previous_options.get('date_from'):
-            date_from = fields.Date.to_date(previous_options['date_from'])
-        if previous_options.get('date_to'):
-            date_to = fields.Date.to_date(previous_options['date_to'])
+        # Preset filters always recompute dates. Only 'custom' keeps the user's date pickers.
+        if date_filter == 'custom':
+            date_from = fields.Date.to_date(previous_options.get('date_from') or today.replace(day=1))
+            date_to = fields.Date.to_date(previous_options.get('date_to') or today)
+        else:
+            date_from, date_to = self._abr_dates_from_filter(date_filter, today, company)
         if not self.filter_date_range:
             date_from = date_to
 
