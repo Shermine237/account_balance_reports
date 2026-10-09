@@ -43,7 +43,7 @@
                                 <field name="domain_formula">sum([('account_id.account_type', '=', 'asset_receivable'), ('account_id.non_trade', '=', False)])</field>
                             </record>
                             <record id="abr_bs_current_assets_other" model="account.report.line">
-                                <field name="name">Current Assets</field>
+                                <field name="name">Other Current Assets</field>
                                 <field name="code">CAS</field>
                                 <field name="groupby">account_id</field>
                                 <field name="foldable" eval="True"/>
@@ -101,7 +101,7 @@
                         </field>
                         <field name="children_ids">
                             <record id="abr_bs_current_liabilities_other" model="account.report.line">
-                                <field name="name">Current Liabilities</field>
+                                <field name="name">Other Current Liabilities</field>
                                 <field name="code">CL1</field>
                                 <field name="groupby">account_id</field>
                                 <field name="foldable" eval="True"/>

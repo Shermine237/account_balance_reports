@@ -148,15 +148,23 @@ msgstr "Crédit"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_current_assets
-#: model:account.report.line,name:account_balance_reports.abr_bs_current_assets_other
 msgid "Current Assets"
 msgstr "Actif circulant"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_current_liabilities
-#: model:account.report.line,name:account_balance_reports.abr_bs_current_liabilities_other
 msgid "Current Liabilities"
 msgstr "Passif circulant"
+
+#. module: account_balance_reports
+#: model:account.report.line,name:account_balance_reports.abr_bs_current_assets_other
+msgid "Other Current Assets"
+msgstr "Autres actif circulant"
+
+#. module: account_balance_reports
+#: model:account.report.line,name:account_balance_reports.abr_bs_current_liabilities_other
+msgid "Other Current Liabilities"
+msgstr "Autres passif circulant"
 
 #. module: account_balance_reports
 #: model:account.report.line,name:account_balance_reports.abr_bs_curr_retained
