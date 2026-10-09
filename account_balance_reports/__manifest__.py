@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Accounting Balance Reports',
-    'version': '18.0.3.0.0',
+    'version': '18.0.3.0.1',
     'category': 'Accounting/Accounting',
     'summary': 'Enterprise-parity Balance Sheet and Trial Balance for Community',
     'description': """
